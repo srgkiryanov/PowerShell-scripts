@@ -3,6 +3,7 @@ $Pass = "YourPasword"
 $Password = $pass|ConvertTo-SecureString -AsPlainText -Force
 $Credential = New-Object -TypeName System.Management.Automation.PSCredential($User, $Password)
 $vcentresdme = @("vcenter1", "vcenter2", "vcenter3", "vcenter4", "vcenter5")
+#---
 $ExcelObj = New-Object -comobject Excel.Application
 $xlsClInvWorkBook = $ExcelObj.Workbooks.Add()
 $xlsClInWorkSheet = $xlsClInvWorkBook.Worksheets.Item(1)
@@ -11,6 +12,7 @@ $xlsClInWorkSheet.Cells.Item(1,4) = 'Кластер'; $xlsClInWorkSheet.Cells.It
 $xlsClInWorkSheet.Rows.Item(1).Font.Bold = $true; $xlsClInWorkSheet.Rows.Item(1).Font.size = 15
 $xlsClInWorkSheet.Columns.Item(1).ColumnWidth = 16.14; $xlsClInWorkSheet.Columns.Item(2).ColumnWidth = 27.43; $xlsClInWorkSheet.Columns.Item(3).ColumnWidth = 14.14
 $xlsClInWorkSheet.Columns.Item(4).ColumnWidth = 21.86; $xlsClInWorkSheet.Columns.Item(5).ColumnWidth = 14; $xlsClInWorkSheet.Columns.Item(6).ColumnWidth = 19.86
+#---
 [int]$i = 2
 foreach ($vcentreorg in $vcentresorg) {
     Connect-VIServer $vcentreorg -Credential $Credential -Force -SaveCredentials
