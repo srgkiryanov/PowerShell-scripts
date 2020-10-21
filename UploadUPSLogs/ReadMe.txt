@@ -1,0 +1,1 @@
+This script unloads log files from two UPS and saves them to text files placed in folders (with the names of your UPS) on the network resource from which the script was launched.
