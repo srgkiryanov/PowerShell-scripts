@@ -1,3 +1,7 @@
+Данный скрипт работает только с установленным PowerCLI.
+Скрипт будет полезен, если у вас возникают сбои в работе vcenter и вам нужно быстро посмотреть, на каком хосте что крутилось.
+Выполняется инвентаризация оборудования и данные выгружаются в файл xls. Входящие параметры: список ваших vcenter, логин и пароль от доменной УЗ (или системная УЗ). Выходные данные: первый лист (оборудование) - список хостов с такими параметрами, как Model, Vcenter, PowerState и ConnectionState. Последующие листы создаются с именами ваших кластеров в Vcenter с такими параметрами, как Name (имя vm), State и CurrentHost (на момент выгрузки).
+=====================================================================================================================================
 The script works only with PowerCLI installed.
 This script will be useful if you experience malfunctions in the vcenter and you need to quickly see on which host what was spinning.
 This script takes hardware inventory and dumps data into an xls file. Incoming parameters: a list of your vcenter, your domain login and password (or a system domain account name). Output data: first sheet (hardware) - a list of hosts, with parameters such as Model, Vcenter, PowerState and ConnectionState. Subsequent sheets are created with the names of your clusters in the Vcenter with parameters such as Name (vm name), State and CurrentHost (at the time of upload).
