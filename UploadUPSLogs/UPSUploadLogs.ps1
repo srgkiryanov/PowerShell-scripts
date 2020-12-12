@@ -1,4 +1,7 @@
-﻿$UPSis = @("123.123.12.34", "234.567.12.34") # UPS IP-adress
+﻿# ================================
+# = проверка работы branch в git =
+# ================================
+$UPSis = @("123.123.12.34", "234.567.12.34") # UPS IP-adress
 $user = 'UPSLogin'
 $password = 'UPSPassword'
 $UploadFolder = "$($PSScriptRoot)\"
